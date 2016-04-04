@@ -1,0 +1,27 @@
+一.文档结构
+	1.将导航链接放在<nav> </nav>标签里面。
+	2.将独立的文档内容放在<article> </article>标签里面。可以使用多个<section></section>把文章分成几个段落，也可以嵌套多个<article></article>作为它的附属文章。
+	3.定义文章头部消息，多个标题时，将标题放在<header> </header>标签里面。
+	4.time:时间；
+	5.section:对页面内容进行分块。通常建议其包含一个标题，可以包含多个<article></article>元素，也可以嵌套<section></section>元素。
+	6.figure:表示一个独立的图片区域。该元素内部可包含一个或多个img元素所代表的图片。除此之外，该元素内部还可包含一个figcaption元素，用于定义该图片区域的标题。
+	7.表格。thead:表格头;tbody:表格的主体，只能包含tr元素;tfoot:表格脚。
+			tr:表格行；td：表格单元格。
+	8.aside:侧边栏;
+二.元素
+	1.div:定义文档中的“节”。
+	  span:与<div>基本相似，区别是该定义的节不会默认换行。
+	2.alt:图片的提示信息。
+	3.<ol start="1" type="1"></ol>
+	  type:1,A,a,I,i
+	4.表单元素。
+	name:指定表单的唯一名称，建议该属性与id属性值保持一致。
+	5.input元素。placeholder：输入字段的提示信息;chencked="checked":设置单选框或复选框初始状态是否处于选中状态;设置type="radio"之后，要给单选组设置同一个name属性值。
+	6.select:用于创建列表框或下拉菜单，该元素必须和option元素结合使用，每个option元素代表一个列表项或菜单项。select元素本身不指定value属性。
+三.特殊符号
+	1.&nbsp;  空格
+	  &amp;   &
+	  &lt;       <
+	  &gt;      >
+	  &quot;   "	
+	  &qpos;   '
