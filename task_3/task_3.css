@@ -1,0 +1,52 @@
+body {
+	border: 1px solid #999;
+	background: #eee;
+}
+
+#team {
+	border: 1px solid #999;
+	width: 200px;
+	margin: 20px;
+	float: left;
+	background: #fff;
+}
+.logo {
+	background: url(柊.jpg) no-repeat;
+	background-size: 80px 80px;
+	width: 80px;
+	height: 80px;
+	margin: 20px;
+	float: left;
+
+}
+.name {
+	padding: 20px;
+	overflow: auto;
+	zoom: 1;
+}
+#introduce {
+	border: 1px solid #999;
+	margin: 20px;
+	padding: 0 20px;
+	background-color: #fff;
+	overflow: auto;
+	zoom: 1;
+}
+#personlogo {
+	border: 1px solid #999;
+	background-color: #fff;
+	margin: 20px;
+	width: 120px;
+	float: right;
+
+}
+img {
+	width: 80px;
+	height: 80px;
+}
+.selflogo {
+	padding: 20px 20px 0;
+}
+.selflogobottom {
+	padding-bottom: 20px;
+}
