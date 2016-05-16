@@ -1,0 +1,10 @@
+body{
+	margin: 0;
+	padding: 0;
+}
+.graybg {
+	width: 400px;
+	height: 200px;
+	background: #ccc;
+	margin: 16% auto;
+}
