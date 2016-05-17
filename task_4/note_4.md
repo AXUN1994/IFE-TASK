@@ -102,4 +102,5 @@
 - 备注：定位position:absoult;通过top:25%;left:25%;bottom:25%;right:25%;加上背景颜色来实现灰色区域的宽高和居中位置。
 
 3. flex居中
-4.table居中
+
+4. table居中
