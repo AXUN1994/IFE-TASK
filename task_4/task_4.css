@@ -6,5 +6,26 @@ body{
 	width: 400px;
 	height: 200px;
 	background: #ccc;
-	margin: 16% auto;
+	position: absolute;
+	top: 50%;
+	margin-top: -100px;
+	left: 50%;
+	margin-left: -200px;
+}
+
+.toparea {
+	width: 50px;
+	height: 50px;
+	border-radius: 0 0 50px 0;
+	position: absolute;
+	background-color: #fc0;
+}
+.bottomarea {
+	width: 50px;
+	height: 50px;
+	border-radius: 50px 0 0 0;
+	position: absolute;
+	background-color: #fc0;
+	right: 0;
+	bottom: 0;
 }

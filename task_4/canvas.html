@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>task_4</title>
+	<link rel="stylesheet" href="canvas.css">
+</head>
+<body>
+	<div class="graybg">
+		<canvas id="circle" width="400" height="200"></canvas>
+		<script type="text/javascript">
+		//获取canvas元素对应的DOM对象
+		var canvas=document.getElementById('circle');
+		//获取在canvas上绘图的CanvasRenderringContext2D对象
+		var ctx=canvas.getContext('2d');
+		for(var i=0;i<2;i++)
+		{
+		//开始定义路径
+		ctx.beginPath();
+		//添加一段圆弧
+	    ctx.arc(i*400,i*200,50,i*Math.PI,Math.PI*2,false);
+		//关闭路径
+		ctx.closePath();
+		//设置填充颜色
+		ctx.fillStyle="#fc0";
+		//填充当前路径
+		ctx.fill();
+	}
+		</script>
+	</div>
+</body>
+</html>
