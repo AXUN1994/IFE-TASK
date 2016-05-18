@@ -98,9 +98,140 @@
     		</div>
    		 </body>
     	</html>
+备注：定位position:absoult;通过top:25%;left:25%;bottom:25%;right:25%;加上背景颜色来实现灰色区域的宽高和居中位置。
 
-- 备注：定位position:absoult;通过top:25%;left:25%;bottom:25%;right:25%;加上背景颜色来实现灰色区域的宽高和居中位置。
+3.  flex居中
 
-3. flex居中
+flex布局介绍参考:
 
-4. table居中
+[flexbox 弹性盒布局和布局原理 - 言川的博客](http://blog.csdn.net/lihongxun945/article/details/45458717)
+
+[Flex 布局教程:语法篇 - 阮一峰的网络日志](http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html)
+
+[Flex 布局教程:实例篇 - 阮一峰的网络日志](http://www.ruanyifeng.com/blog/2015/07/flex-examples.html?bsh_bid=683103006)
+
+		<!DOCTYPE html>
+		<html lang="en">
+		<head>
+		<meta charset="UTF-8">
+		<title>flex</title>
+		<style type="text/css">
+		*{
+			padding:0;
+			margin:0;
+		}
+		body{
+		width: 100%;
+		height: 100%;
+		}
+		.wrap{
+			width:100%;
+			height:100%;		
+			display: -webkit-flex;
+			display: flex;
+			justify-content:center;
+			align-items:center;
+		}
+		.inner{
+			width: 400px;
+			height: 200px;
+			background: #ccc;
+			position: relative;
+			overflow: hidden;
+		}
+		.corner{
+			position: absolute;
+			width:100px;
+			height: 100px;
+			border-radius: 50%;
+			background: #fc0;
+		}
+		.top-corner{
+			left:-50px;
+			top:-50px;
+
+		}
+		.bottom-corner{
+			right:-50px;
+			bottom:-50px;
+		}
+		</style>
+		</head>
+		<body>
+		<div class="wrap">
+		<div class="inner">
+			<div class="corner top-corner"></div>
+			<div class="corner bottom-corner"></div>
+		</div>
+		</div>
+		</body>
+		</html>
+
+_4. table居中
+
+关于display:table-cell;的应用：
+[display:table-cell;的应用](http://www.zhangxinxu.com/wordpress/2010/10/%E6%88%91%E6%89%80%E7%9F%A5%E9%81%93%E7%9A%84%E5%87%A0%E7%A7%8Ddisplaytable-cell%E7%9A%84%E5%BA%94%E7%94%A8/)
+
+关于vertical-align的应用：
+[理解vertical-align或“如何竖向居中”](http://www.webhek.com/vertical-align/)
+
+		<!DOCTYPE html>
+		<html lang="en">
+		<head>
+		<meta charset="UTF-8">
+		<title>flex</title>
+		<style type="text/css">
+		*{
+			padding:0;
+			margin:0;
+		}
+		 body{
+            width: 100%;
+            height: 100%;
+        }
+		.wrap{
+			width: 100%;
+			height:100%;
+			display: table;
+		}
+		.content{
+			display: table-cell;
+			vertical-align: middle;
+		}
+		.inner{
+			width: 400px;
+			height: 200px;
+			background: #ccc;
+			position: relative;
+			margin:0 auto;
+			overflow: hidden;
+		}
+		.corner{
+			position: absolute;
+			width:100px;
+			height: 100px;
+			border-radius: 50%;
+			background: #fc0;
+		}
+		.top-corner{
+				left:-50px;
+				top:-50px;
+
+		}
+		.bottom-corner{
+				right:-50px;
+				bottom:-50px;
+		}
+		</style>
+		</head>
+		<body>
+		<div class="wrap">
+		<div class="content">
+			<div class="inner">
+				<div class="corner top-corner"></div>
+				<div class="corner bottom-corner"></div>
+			</div>
+		</div>
+		</div>
+		</body>
+		</html>
