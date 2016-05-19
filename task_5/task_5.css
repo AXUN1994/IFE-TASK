@@ -84,7 +84,7 @@ th,td {
 	font-weight: bold;
 }
 .bgcolor td { border: 0;}
-/* .asidestyle用position:absolute;定位，则当浏览器的宽度缩小至其宽度时，article变得只有一个文字的宽度，aside会覆盖在article上面;且导航栏处会乱掉*/
+/* aside用position:absolute;定位，则当浏览器的宽度缩小至其宽度时，article变得只有一个文字的宽度，aside会覆盖在article上面;且导航栏处会乱掉*/
 /*当body设置min-width属性时，aside右侧会有大片空白*/
 /*所以在此不采用position布局,采用浮动*/
 aside {
