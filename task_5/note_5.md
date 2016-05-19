@@ -1,7 +1,7 @@
 ## 日报  5.19 星期四
 ### 做了什么
 * 完成任务五
-* 
+ 
 > demo地址:[https://axun1994.github.io/IFE_TASK/task_5/index.html](https://axun1994.github.io/IFE_TASK/task_5/index.html)
 
 > code:[https://github.com/AXUN1994/IFE_TASK/blob/master/task_5/index.html](https://github.com/AXUN1994/IFE_TASK/blob/master/task_5/index.html)
@@ -21,3 +21,4 @@
 	- position:absoulte;是基于屏幕页面的绝对定位，其他元素不会对其产生影响
 	- position:relative;是基于上一行没有用position的文字的相对定位
 	- 右侧区域aside用position:absolute;定位时，若body不设置min-width，当浏览器的宽度缩小至其宽度时，article变得只有一个文字的宽度，aside会覆盖在article上面，且导航栏处会乱掉；当body设置min-width属性时，aside右侧会有大片空白。所以在此不采用position,采用浮动float:right;
+* 实现导航栏处链接在当前页面内的跳转，设置为href="#article_1",然后在相应的位置给合适的标签添加id="article_1"
