@@ -98,17 +98,17 @@
     		</div>
    		 </body>
     	</html>
-备注：定位position:absoult;通过top:25%;left:25%;bottom:25%;right:25%;加上背景颜色来实现灰色区域的宽高和居中位置。
+	备注：定位position:absoult;通过top:25%;left:25%;bottom:25%;right:25%;加上背景颜色来实现灰色区域的宽高和居中位置。
 
 3.  flex居中
 
-flex布局介绍参考:
+	flex布局介绍参考:
 
-[flexbox 弹性盒布局和布局原理 - 言川的博客](http://blog.csdn.net/lihongxun945/article/details/45458717)
+	[flexbox 弹性盒布局和布局原理 - 言川的博客](http://blog.csdn.net/lihongxun945/article/details/45458717)
 
-[Flex 布局教程:语法篇 - 阮一峰的网络日志](http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html)
+	[Flex 布局教程:语法篇 - 阮一峰的网络日志](http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html)
 
-[Flex 布局教程:实例篇 - 阮一峰的网络日志](http://www.ruanyifeng.com/blog/2015/07/flex-examples.html?bsh_bid=683103006)
+	[Flex 布局教程:实例篇 - 阮一峰的网络日志](http://www.ruanyifeng.com/blog/2015/07/flex-examples.html?bsh_bid=683103006)
 
 		<!DOCTYPE html>
 		<html lang="en">
@@ -167,71 +167,96 @@ flex布局介绍参考:
 		</body>
 		</html>
 
-_4. table居中
+4. table居中
 
-关于display:table-cell;的应用：
-[display:table-cell;的应用](http://www.zhangxinxu.com/wordpress/2010/10/%E6%88%91%E6%89%80%E7%9F%A5%E9%81%93%E7%9A%84%E5%87%A0%E7%A7%8Ddisplaytable-cell%E7%9A%84%E5%BA%94%E7%94%A8/)
+	##### 关于display:table-cell;的应用：
 
-关于vertical-align的应用：
-[理解vertical-align或“如何竖向居中”](http://www.webhek.com/vertical-align/)
+	参考链接： [display:table-cell;的应用](http://www.zhangxinxu.com/wordpress/2010/10/%E6%88%91%E6%89%80%E7%9F%A5%E9%81%93%E7%9A%84%E5%87%A0%E7%A7%8Ddisplaytable-cell%E7%9A%84%E5%BA%94%E7%94%A8/)
 
-		<!DOCTYPE html>
-		<html lang="en">
-		<head>
-		<meta charset="UTF-8">
-		<title>flex</title>
-		<style type="text/css">
-		*{
-			padding:0;
-			margin:0;
-		}
-		 body{
-            width: 100%;
-            height: 100%;
-        }
-		.wrap{
-			width: 100%;
-			height:100%;
-			display: table;
-		}
-		.content{
-			display: table-cell;
-			vertical-align: middle;
-		}
-		.inner{
-			width: 400px;
-			height: 200px;
-			background: #ccc;
-			position: relative;
-			margin:0 auto;
-			overflow: hidden;
-		}
-		.corner{
-			position: absolute;
-			width:100px;
-			height: 100px;
-			border-radius: 50%;
-			background: #fc0;
-		}
-		.top-corner{
-				left:-50px;
-				top:-50px;
+	 - display:table-cell属性指让标签元素以表格单元格的形式呈现，类似于td标签。单元格有一些比较特别的属性，例如元素的垂直居中对齐，关联伸缩等。
 
-		}
-		.bottom-corner{
-				right:-50px;
-				bottom:-50px;
-		}
-		</style>
-		</head>
-		<body>
-		<div class="wrap">
-		<div class="content">
-			<div class="inner">
-				<div class="corner top-corner"></div>
-				<div class="corner bottom-corner"></div>
-			</div>
-		</div>
-		</div>
-		</body>
-		</html>
+		与其他一些display属性类似，table-cell同样会被其他一些CSS属性破坏，例如float, position:absolute；所以，在使用display:table-cell与float:left或是position:absolute属性尽量不同用。设置了display:table-cell的元素对宽度高度敏感，对margin值无反应，响应padding属性，基本上就是活脱脱的一个td标签元素了。
+
+	* display:table-cell实现两栏自适应布局
+
+		左侧为头像，右侧内容自适应。其中头像部分使用了float属性，左浮动，IE8+以及Firefox、Chrome、Opera等现代浏览器右侧使用了display:table-cell属性，结果就自适应了。
+
+		对于不认识display:table-cell属性的IE6/7呢？很简单，使用display:inline-block属性代替display:table-cell就完全ok的啦！
+
+		如果内容有限，则宽度就是内容的宽度，此时想要让某个元素（例如关闭按钮）右侧定位就会有问题，解决方法就是定义一个非常宽的宽度，就像上面facebook截图中的CSS属性一样，所以，考虑到各种情况，更健壮耐用的CSS代码应如下：
+
+			display:table-cell; *display:inline-block; width:2000px; *width:auto;
+
+		或者使用：
+
+			display:table-cell;  width:2000px; *width:auto; *zoom:1;
+
+	* display:table-cell下的等高布局
+
+		table表格中的单元格最大的特点之一就是同一行列表元素都等高。
+
+	##### 关于vertical-align的应用：
+	参考链接： [理解vertical-align或“如何竖向居中”](http://www.webhek.com/vertical-align/)
+
+	##### table居中的源代码
+
+		    <!DOCTYPE html>
+    		<html lang="en">
+    		<head>
+    		<meta charset="UTF-8">
+    		<title>flex</title>
+    		<style type="text/css">
+    		*{
+    			padding:0;
+    			margin:0;
+    		}
+    		 body{
+    		width: 100%;
+   			height: 100%;
+   			}
+    		.wrap{
+    			width: 100%;
+    			height:100%;
+    			display: table;
+    		}
+    		.content{
+    			display: table-cell;
+    			vertical-align: middle;
+    		}
+    		.inner{
+    			width: 400px;
+    			height: 200px;
+    			background: #ccc;
+    			position: relative;
+    			margin:0 auto;
+    			overflow: hidden;
+    		}
+    		.corner{
+    			position: absolute;
+    			width:100px;
+    			height: 100px;
+    			border-radius: 50%;
+    			background: #fc0;
+    		}
+    		.top-corner{
+    				left:-50px;
+    				top:-50px;
+    
+    		}
+    		.bottom-corner{
+    				right:-50px;
+    				bottom:-50px;
+    		}
+    		</style>
+    		</head>
+    		<body>
+    		<div class="wrap">
+    		<div class="content">
+    			<div class="inner">
+    				<div class="corner top-corner"></div>
+    				<div class="corner bottom-corner"></div>
+    			</div>
+    		</div>
+    		</div>
+    		</body>
+    		</html>
