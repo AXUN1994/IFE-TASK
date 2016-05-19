@@ -1,0 +1,143 @@
+body,ul {
+	margin: 0;
+	padding: 0;
+}
+body {
+	width: 100%;
+	background-color: #DEDEDE;
+	font-family: 微软雅黑;
+	min-width: 750px;
+}
+h3,span,time{ color: gray;}
+span,time {font-size: 14px;}
+.topnav {
+	background: url(百度logo.png) no-repeat 50px;
+	background-color: #333333;
+	width: 100%;
+	height: 80px;
+}
+nav ul li {
+	float: left;
+	margin: 0 15px;
+	line-height: 80px;
+}
+nav ul {
+	float: right;
+}
+nav ul li a:link,li a:visited {
+	text-decoration: none;
+	color: #fff;
+}
+nav ul li a:hover {
+	color: green;
+	background-color: #fff;
+}
+article img {
+	width: 60%;
+}
+.list {
+	margin: 20px 2%;
+	padding: 0 1.5%;
+	list-style: none;
+}
+article,section {
+	margin: 20px 450px 20px 20px;
+	background: #fff;
+	padding: 20px;
+	line-height: 1.5;
+	border-color: #DEDEDE #848484 #848484 #DEDEDE ;
+	border-style: solid;
+}
+
+figure{
+  width: 100px;
+  border: 1px solid #aaa;
+  text-align: center;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  display: inline-block;
+  margin-left: 0;
+}
+
+figure img {
+	width:70%;
+}
+
+figcaption{
+  padding: 5px;
+}
+table
+  { border-collapse:collapse;}
+table,th,td {border: 1px solid gray;}
+th,td {
+	width:2%;
+	height: 25px;
+	padding-left: 1%;
+}
+.thstyle{ 
+	background-color:#333333;
+	color: #fff;
+	text-align: left;
+}
+.bgcolor { 
+	background-color: #CCCCCC;
+	font-weight: bold;
+}
+.bgcolor td { border: 0;}
+/* .asidestyle用position:absolute;定位，则当浏览器的宽度缩小至其宽度时，article变得只有一个文字的宽度，aside会覆盖在article上面;且导航栏处会乱掉*/
+/*当body设置min-width属性时，aside右侧会有大片空白*/
+/*所以在此不采用position布局,采用浮动*/
+aside {
+	width: 420px;
+	height: 630px;
+	margin-top: 20px;
+	/*position: absolute;
+	top: 100px;
+	right: 0;*/
+	border-color: #DEDEDE #848484 #848484 #DEDEDE ;
+	border-style: solid;
+	border-width: 1px 2px 2px 1px;
+	background-color: #FFFFFF;
+	float: right;
+}
+.asideborder{
+	border-left: 3px solid #808080;
+	height: 40px;
+	padding-top: 10px;
+	font-size: 20px;
+}
+form { line-height: 40px;}
+.record {
+    width: 43%;
+    text-align: right;
+    display: inline-block;
+    vertical-align: top;
+}
+.tip {
+    font-size: 15px;
+    color: gray;
+    margin-left: 43%;
+}
+button {
+	border-radius: 10px;
+	background-color: #3355D0;
+	width: 90%;
+	height: 40px;
+	margin-left: 5%;
+	font-family: 微软雅黑;
+	font-size: 25px;
+	color: #fff;
+	border: 0;
+}
+button:hover {
+	background-color: #0063dc;
+}
+footer {
+	width: 100%;
+	height: 60px;
+	background-color: #000000;
+	color: #fff;
+	text-align: center;
+	line-height: 60px;	
+	font-size: 20px;
+}
