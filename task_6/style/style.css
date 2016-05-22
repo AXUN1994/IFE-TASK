@@ -169,7 +169,7 @@ body {
 .footer_left {
 	width: 415px;
 	margin-left: 44px;
-	margin-top: 90px;
+	margin-top: 80px;
 	margin-bottom: 20px;
 	float: left;
 }
@@ -178,7 +178,7 @@ body {
 	font-family: 黑体;
 	font-weight: bold;
 	color: #11456b;
-	line-height: 40px;
+	line-height: 50px;
 }
 .footer_left h1 span {
 	font-size: 72px;
@@ -222,14 +222,14 @@ body {
 	width: 458px;
 	margin-right: 44px;
 	float: right;
-	margin-top: 80px;
+	margin-top: 70px;
 	position: relative;
 }
 .footer_right .front {
 	width: 458px;
 	height: 61px;
 	background-color: #353434; 
-	opacity: 0.4;
+	background: rgba(0,0,0,0.4);
 	position: absolute;
 	top: 214px;
 }
@@ -261,20 +261,19 @@ body {
 }
 .footer_right ul li {
 	float: left;
-	background: url(../images/triangle.jpg) no-repeat left;
+	background: url(../images/triangle.gif) no-repeat left;
 	margin-top: 20px;
 	text-align: left;
 	padding-left: 20px;
 	margin-left: 26px;
 	line-height: 20px;
 }
-.footer_right ul li span {
+.footer_right li span {
 	font-size: 12px;
 	color: #5a5b5b;
 	font-family: 宋体;
 	font-style: italic;
 	line-height: 20px;
-	text-align: right;
 }
 .one {
 	width: 260px;
@@ -314,12 +313,18 @@ body {
 .right_bottom p {
 	margin-top: 30px;
 	width: 198px;
-	float: right;
 	font-size: 14px;
 	color: #5a5b5b;
 	font-family: 黑体;
 	font-style: italic;
 	line-height: 16px;
+	text-indent: 3em;
+	position: absolute;
+    right: 0px;
+    bottom: 0px;
+    width: 180px;
+    height: 160px;
+    margin-right: 10px;
 }
 .right_bottom p:before {
 	content: "“";
@@ -327,7 +332,10 @@ body {
     color: #d45d5c;
     font-family: 黑体;
     font-style: normal;
-    float: left;
+    line-height: 30px;
+    position: absolute;
+    bottom: 120px;
+    right: 150px;
 }
 .right_bottom p:after {
 	content: "”";
@@ -335,13 +343,16 @@ body {
     color: #d45d5c;
     font-family: 黑体;
     font-style: normal;
-    float: right;
+    line-height: 30px;
+    position: absolute;
+    bottom: 35px;
+    left: 90px;
 }
 
 
 #bottom {
 	width: 892px;
-	margin-left: 44px;
+	margin: 0 auto;
 }
 #bottom hr {
 	border: 1px solid #938e8c;
