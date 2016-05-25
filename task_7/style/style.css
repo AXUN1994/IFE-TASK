@@ -50,12 +50,15 @@ button ,select{
 	}
 	#top ul {
 		height: 100%;
+		float: right;
 		margin-right: 37px;
+		position: relative;
 	}
 	ul li {
-		width:65px;
+		width: 56px;
 		height: 100%;
 		margin-left: 44px;
+		box-sizing: border-box;
  		text-align: center;
 		display: inline-block;
 	}
@@ -65,19 +68,34 @@ button ,select{
   		color:#7C7A82;
   		text-decoration: none;
 	}
-	#top li:hover, #top > a:hover {
-	border-bottom: 5px solid #E34E52;
-	}
 	#top a:hover {
 	color: #E34E52;
 	}
-	.active{
-  	border-bottom: 5px solid #E34E52;
+	#top ul li:nth-child(1):hover~.move{
+		left:0;
+	}
+	#top ul li:nth-child(2):hover~.move{
+		left: 112px;
+	}
+	#top ul li:nth-child(3):hover~.move{
+		left: 224px;
+	}
+	#top ul li:nth-child(4):hover~.move{
+		left: 336px;
+	}
+	#top ul li:nth-child(5):hover~.move{
+		left: 448px;
+	}
+	.move{
+    position: absolute;
+    border-top: 4px solid #E53C3C;
+    /*width: 56px;*/
+    left: 0;
+    top: 55px;
+    webkit-transition: left 0.4s ease-in-out;
+    -moz-transition: left 0.4s ease-in-out;
+    transition: left 0.5s ease-in-out;
 }
-	ul .active a{
-  color:#E34E52;
-}
-	
 
 /*#header*/
 #header {
