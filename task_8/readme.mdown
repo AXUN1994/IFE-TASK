@@ -1,0 +1,79 @@
+## 方法一介绍
+> 元素`box-sizing:border-box;`
+为了使盒子的高（宽）度等于内容的高（宽）度加上外边距的高（宽）度，即内容的高（宽）度包含内容、内边距和边框。
+
+> 要求是边距为20px，用`.container{padding: 10px;}`和`.row{padding: 10px;}`实现。
+
+	html：
+	<div id="container">
+    <div class="row col-md-4 col-sm-6">
+        <div class="inner"></div>
+    </div>
+    ···
+	···
+	···
+	</div>
+
+	css:
+
+	body {
+    margin: 0;
+    padding: 0;
+	}
+
+	#container {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px;
+	}
+	.row {
+    box-sizing: border-box;
+    float: left;
+    padding: 10px;
+	}
+	.inner {
+	box-sizing: inherit;
+    height: 50px;
+    background-color: #eee;
+    border: 1px solid #999;
+	}
+	.inner {
+    height: 50px;
+    background-color:#eee;
+    border: 1px solid #999;
+	}
+	@media(min-width:768px){
+	}
+	@media(max-width:768px){
+	}
+
+## 方法二介绍
+> 没有使用`box-sizing`,直接用`margin:10px;`
+
+    html:
+    <div class="container">
+		<div class="col-md-4 col-sm-6">
+			<div class="content"></div>
+		</div>
+    ···
+	···
+	···
+	</div>
+
+	css:
+	body {
+	margin: 0;
+	padding: 0;
+	}
+	.container { margin: 10px;}
+	[class*="col-"] { float: left;}
+	.content {
+	margin: 10px;
+	height: 48px;
+	border: 1px solid #999;
+	background-color: #eee;
+	}
+	@media(min-width: 768px){
+	}
+	@media(min-width: 768px){
+	}
