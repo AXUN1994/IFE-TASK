@@ -1,0 +1,99 @@
+ul,
+li {
+	margin:0;
+	padding:0;
+	list-style-type: none;
+}
+
+thead {
+	color: #fff;
+	background-color: #000;
+	text-align: left;
+}
+tbody {
+	font-weight: bold;
+}
+tbody tr:nth-child(-n+3) {
+	color: red;
+}
+tbody tr:nth-of-type(even) {
+ 	background-color: #CCCCCC;
+}
+
+input {
+	display: block;
+	margin-top: 10px;
+	width: 150px;
+	transition: width 2s ease-in-out;
+}
+input:focus {
+	width: 400px;
+}
+.banner {
+	position: relative;
+	overflow: hidden;
+	width: 300px;
+	height: 200px;
+	margin-top: 20px;
+	border: 1px solid #9cc5ef;
+}
+@-webkit-keyframes change {
+	0% {
+		left: 100%;
+	}
+	100% {
+		left: 0;
+	}
+}
+.slider {
+	overflow: hidden;
+	width: 300%;
+	font: bold 100px/200px "微软雅黑";
+	color: #fff;
+}
+.slider li {
+	position: absolute;
+	width: 300px;
+	height: 100%;
+	text-align: center;
+}
+.slider li:nth-child(1) {
+  z-index: 3;
+  background-color: #01254a;
+}
+.slider li:nth-child(2) {
+  z-index: 2;
+  background-color: #C4D213;
+}
+.slider li:nth-child(3) {
+  z-index: 1;
+  background-color: #6bacef;
+}
+
+/*#fir {background-color: red;}
+#sec {background-color: blue;}
+#thr {background-color: yellow;}*/
+.slider li:target {
+  z-index: 6;
+  animation: change 500ms linear;
+}
+
+.banner-controll { 
+	position: absolute;
+	overflow: hidden;
+    bottom: 0;
+    right: 0;
+    z-index: 10;
+}
+.banner-controll a {
+	display: inline-block;
+	margin-left: 2px;
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	opacity: 0.5;
+	background-color: #fff;
+	color: #000;
+	text-decoration: none;
+}
